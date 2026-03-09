@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4S Academy | IB, A-Level, SAT & AP Tutoring | Barcelona & Online</title>
+  <meta name="description" content="Expert tutoring in IB Maths, IB Physics, SAT, AP Calculus and more. Founded by Suneel Gupta with 30+ years experience. Barcelona-based, available worldwide online. Clarity, Confidence, Results.">
+  <meta name="keywords" content="IB tutor Barcelona, IB Maths tutor, IB Physics tutor, SAT tutor, AP Calculus, online tutor, 4S Academy">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green:      #16a34a;
+      --green-d:    #15803d;
+      --green-dd:   #14532d;
+      --green-l:    #dcfce7;
+      --green-xl:   #f0fdf4;
+      --dark:       #0a1628;
+      --dark-2:     #0f2318;
+      --ink:        #1a1a2e;
+      --slate:      #374151;
+      --muted:      #6b7280;
+      --border:     #e5e7eb;
+      --white:      #ffffff;
+      --off:        #f9fafb;
+      --gold:       #f59e0b;
+      --radius:     14px;
+      --shadow:     0 4px 24px rgba(0,0,0,0.08);
+      --shadow-lg:  0 12px 48px rgba(0,0,0,0.12);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--ink); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+    .section { padding: 96px 0; }
+    .section-sm { padding: 64px 0; }
+
+    /* ── TYPOGRAPHY ── */
+    .eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--green); margin-bottom: 12px; display: block; }
+    .h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 6vw, 72px); line-height: 1.1; font-weight: 800; }
+    .h2 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 4vw, 48px); line-height: 1.15; font-weight: 700; }
+    .h3 { font-size: 20px; font-weight: 700; line-height: 1.3; }
+    .lead { font-size: 18px; color: var(--slate); line-height: 1.75; }
+    .text-green { color: var(--green); }
+    .text-white { color: #fff; }
+    .text-center { text-align: center; }
+    .text-muted { color: var(--muted); }
+
+    /* ── BUTTONS ── */
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: 10px; font-size: 15px; font-weight: 700; cursor: pointer; border: none; transition: all 0.2s; letter-spacing: 0.01em; font-family: 'Inter', sans-serif; }
+    .btn-green { background: var(--green); color: #fff; }
+    .btn-green:hover { background: var(--green-d); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(22,163,74,0.4); }
+    .btn-outline { background: transparent; color: var(--green); border: 2px solid var(--green); }
+    .btn-outline:hover { background: var(--green-xl); transform: translateY(-2px); }
+    .btn-dark { background: var(--dark); color: #fff; }
+    .btn-dark:hover { background: #1e3a5f; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(10,22,40,0.3); }
+    .btn-white { background: #fff; color: var(--green-dd); }
+    .btn-white:hover { background: var(--green-l); transform: translateY(-2px); }
+    .btn-wa { background: #25D366; color: #fff; }
+    .btn-wa:hover { background: #20b858; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.4); }
+    .btn-lg { padding: 18px 42px; font-size: 16px; border-radius: 12px; }
+
+    /* ── NAV ── */
+    nav { position: sticky; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; color: var(--ink); }
+    .logo-mark { width: 40px; height: 40px; background: linear-gradient(135deg, #0c1a10, var(--green)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 900; color: #fff; letter-spacing: -1px; }
+    .logo-mark svg { width: 24px; height: 24px; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 14px; font-weight: 600; color: var(--slate); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta { display: flex; align-items: center; gap: 12px; }
+    .nav-cta .btn { padding: 10px 22px; font-size: 13px; border-radius: 8px; }
+    .nav-mobile-btn { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+    .mobile-menu { display: none; }
+
+    /* ── TOPBAR ── */
+    .topbar { background: var(--green-d); color: #fff; text-align: center; padding: 9px 24px; font-size: 13px; font-weight: 500; }
+    .topbar em { font-style: italic; color: rgba(255,255,255,0.85); }
+
+    /* ── HERO ── */
+    .hero { background: linear-gradient(160deg, #061209 0%, #0c2414 40%, #0a1e10 100%); position: relative; overflow: hidden; padding: 90px 0 90px; }
+    .hero::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(22,163,74,0.12) 0%, transparent 70%); pointer-events:none; }
+    .hero-deco { position:absolute; font-family:monospace; font-size:72px; font-weight:900; color:rgba(22,163,74,0.06); pointer-events:none; user-select:none; }
+    .hero-deco.d1 { top:10%; left:3%; font-size:100px; }
+    .hero-deco.d2 { top:60%; left:8%; font-size:60px; }
+    .hero-deco.d3 { top:20%; right:4%; font-size:80px; }
+    .hero-deco.d4 { bottom:10%; right:10%; font-size:50px; }
+    .hero-inner { display: flex; align-items: center; gap: 60px; position:relative; z-index:1; }
+    .hero-text { flex: 1; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(22,163,74,0.15); border: 1px solid rgba(22,163,74,0.3); border-radius: 99px; padding: 6px 16px; font-size: 13px; font-weight: 600; color: #22c55e; margin-bottom: 22px; }
+    .hero-title { font-size: 58px; font-weight: 900; line-height: 1.08; letter-spacing: -0.03em; color: #fff; margin-bottom: 22px; }
+    .hero-title .accent { color: #22c55e; }
+    .hero-sub { font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 36px; max-width: 520px; }
+    .hero-cta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { display: inline-block; padding: 5px 14px; border-radius: 99px; font-size: 12px; font-weight: 700; letter-spacing: 0.03em; }
+    .pill-white { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+    .hero-visual { flex: 0 0 380px; position: relative; }
+    .hero-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 28px; backdrop-filter: blur(20px); }
+    .hero-card-title { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px; }
+    .stat-row { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .stat-row:last-child { border: none; }
+    .stat-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .stat-val { font-size: 22px; font-weight: 800; color: #fff; line-height: 1; }
+    .stat-lbl { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip { background: var(--green); padding: 18px 0; }
+    .trust-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 28px; }
+    .trust-item { display: flex; align-items: center; gap: 8px; color: #fff; font-size: 14px; font-weight: 600; }
+    .trust-sep { color: rgba(255,255,255,0.35); font-size: 20px; }
+
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+
+    /* ── STATS BAR ── */
+    .stats-bar { background: var(--off); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 0; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+    .stat-item { text-align: center; padding: 0 24px; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: 40px; font-weight: 900; color: var(--green); line-height: 1; }
+    .stat-label { font-size: 14px; color: var(--muted); font-weight: 500; margin-top: 6px; }
+
+    /* ── SUBJECTS ── */
+    .subjects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+    .subject-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; transition: all 0.25s; position: relative; overflow: hidden; }
+    .subject-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--green-xl), transparent); opacity: 0; transition: opacity 0.25s; }
+    .subject-card:hover { border-color: var(--green); box-shadow: 0 8px 32px rgba(22,163,74,0.12); transform: translateY(-4px); }
+    .subject-card:hover::before { opacity: 1; }
+    .subject-icon { width: 52px; height: 52px; background: var(--green-xl); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px; position: relative; z-index: 1; }
+    .subject-card h3 { margin-bottom: 10px; position: relative; z-index: 1; }
+    .subject-card p { color: var(--muted); font-size: 14px; line-height: 1.7; position: relative; z-index: 1; }
+    .subject-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; position: relative; z-index: 1; }
+    .tag { padding: 4px 12px; border-radius: 99px; font-size: 11px; font-weight: 700; background: var(--green-l); color: var(--green-dd); }
+
+    /* ── WHY US ── */
+    .why-section { background: var(--dark); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .why-content h2 { color: #fff; margin-bottom: 20px; }
+    .why-content .lead { color: #94a3b8; margin-bottom: 40px; }
+    .why-list { display: flex; flex-direction: column; gap: 24px; }
+    .why-item { display: flex; gap: 16px; }
+    .why-check { width: 36px; height: 36px; background: rgba(22,163,74,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #4ade80; font-size: 18px; }
+    .why-item-text h4 { color: #fff; font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .why-item-text p { color: #94a3b8; font-size: 14px; line-height: 1.65; }
+    .why-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .why-metric { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 28px 24px; text-align: center; }
+    .why-metric-num { font-size: 36px; font-weight: 900; color: #4ade80; line-height: 1; margin-bottom: 6px; }
+    .why-metric-label { font-size: 13px; color: #94a3b8; }
+    .why-metric.accent { background: rgba(22,163,74,0.15); border-color: rgba(22,163,74,0.25); }
+
+    /* ── ABOUT ── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: center; }
+    .about-photo { position: relative; }
+    .about-photo-box { border-radius: 24px; overflow: hidden; }
+    .about-photo-initials { display: none; }
+    .about-photo-img { width: 100%; display: block; border-radius: 24px; }
+    .about-photo-tag { display: none; }
+    .about-photo-tag-icon { display: none; }
+    .about-photo-tag-text p { display: none; }
+    .about-photo-tag-text strong { display: none; }
+    .about-content .eyebrow { margin-bottom: 8px; }
+    .about-content h2 { margin-bottom: 8px; }
+    .about-content .lead { margin-bottom: 28px; }
+    .about-bio p { color: var(--slate); font-size: 16px; line-height: 1.8; margin-bottom: 16px; }
+    .about-credentials { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .credential { display: flex; align-items: center; gap: 8px; background: var(--off); border: 1px solid var(--border); border-radius: 8px; padding: 10px 16px; font-size: 13px; font-weight: 600; color: var(--slate); }
+    .credential svg { color: var(--green); }
+
+    /* ── PLATFORM PREVIEW ── */
+    .platform-section { background: linear-gradient(135deg, var(--green-dd) 0%, var(--dark-2) 100%); }
+    .platform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .platform-content h2 { color: #fff; margin-bottom: 16px; }
+    .platform-content .lead { color: #94a3b8; margin-bottom: 36px; }
+    .platform-features { display: flex; flex-direction: column; gap: 16px; margin-bottom: 36px; }
+    .platform-feature { display: flex; align-items: flex-start; gap: 14px; }
+    .platform-feature-icon { width: 32px; height: 32px; background: rgba(74,222,128,0.15); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #4ade80; font-size: 16px; }
+    .platform-feature-text h4 { color: #fff; font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+    .platform-feature-text p { color: #94a3b8; font-size: 13px; }
+    .platform-coming { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3); color: #fcd34d; padding: 8px 18px; border-radius: 99px; font-size: 13px; font-weight: 600; margin-bottom: 24px; }
+    .platform-mockup { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 24px; }
+    .mockup-bar { display: flex; gap: 6px; margin-bottom: 20px; }
+    .mockup-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .mockup-screen { background: rgba(0,0,0,0.3); border-radius: 12px; padding: 20px; }
+    .mockup-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-radius: 8px; margin-bottom: 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); }
+    .mockup-label { color: #94a3b8; font-size: 12px; }
+    .mockup-badge { padding: 3px 10px; border-radius: 99px; font-size: 10px; font-weight: 700; }
+    .badge-green { background: rgba(74,222,128,0.2); color: #4ade80; }
+    .badge-yellow { background: rgba(251,191,36,0.2); color: #fbbf24; }
+    .badge-blue { background: rgba(96,165,250,0.2); color: #60a5fa; }
+    .mockup-progress { margin-top: 16px; }
+    .mockup-progress-label { display: flex; justify-content: space-between; font-size: 11px; color: #94a3b8; margin-bottom: 6px; }
+    .mockup-bar-bg { background: rgba(255,255,255,0.1); border-radius: 99px; height: 6px; }
+    .mockup-bar-fill { height: 100%; border-radius: 99px; background: linear-gradient(90deg, #4ade80, #16a34a); }
+    .pricing-preview { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+    .price-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; text-align: center; }
+    .price-card.featured { background: rgba(22,163,74,0.2); border-color: rgba(22,163,74,0.4); }
+    .price-plan { font-size: 12px; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .price-amount { font-size: 28px; font-weight: 900; color: #fff; }
+    .price-amount span { font-size: 13px; font-weight: 500; color: #94a3b8; }
+    .price-includes { font-size: 11px; color: #94a3b8; margin-top: 6px; }
+
+    /* ── REVIEWS ── */
+    .reviews-section { background: var(--off); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+    .review-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; }
+    .review-stars { color: var(--gold); font-size: 16px; margin-bottom: 16px; letter-spacing: 2px; }
+    .review-text { color: var(--slate); font-size: 15px; line-height: 1.75; margin-bottom: 20px; font-style: italic; }
+    .review-text::before { content: '"'; }
+    .review-text::after { content: '"'; }
+    .review-author { display: flex; align-items: center; gap: 12px; }
+    .review-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--green-l); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px; color: var(--green-dd); flex-shrink: 0; }
+    .review-name { font-weight: 700; font-size: 14px; color: var(--ink); }
+    .review-meta { font-size: 12px; color: var(--muted); }
+    .google-badge { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 40px; color: var(--muted); font-size: 14px; }
+    .google-badge a { color: var(--green); font-weight: 600; }
+
+    /* ── FORMATS ── */
+    .formats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+    .format-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 28px; text-align: center; transition: all 0.25s; }
+    .format-card:hover { border-color: var(--green); box-shadow: var(--shadow); transform: translateY(-4px); }
+    .format-icon { font-size: 40px; margin-bottom: 20px; }
+    .format-card h3 { margin-bottom: 10px; }
+    .format-card p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+
+    /* ── CTA BANNER ── */
+    .cta-banner { background: linear-gradient(135deg, var(--green-dd), var(--green-d)); padding: 80px 0; text-align: center; }
+    .cta-banner h2 { color: #fff; margin-bottom: 16px; }
+    .cta-banner p { color: rgba(255,255,255,0.75); font-size: 18px; margin-bottom: 40px; }
+    .cta-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
+
+    /* ── CONTACT ── */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 56px; }
+    .contact-info h3 { margin-bottom: 8px; }
+    .contact-info p { color: var(--muted); font-size: 15px; line-height: 1.7; margin-bottom: 32px; }
+    .contact-details { display: flex; flex-direction: column; gap: 16px; }
+    .contact-detail { display: flex; align-items: flex-start; gap: 14px; }
+    .contact-detail-icon { width: 40px; height: 40px; background: var(--green-xl); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .contact-detail-text p { font-size: 12px; color: var(--muted); margin-bottom: 2px; }
+    .contact-detail-text a, .contact-detail-text strong { font-size: 15px; font-weight: 600; color: var(--ink); }
+    .contact-form { background: var(--off); border: 1px solid var(--border); border-radius: 20px; padding: 40px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--slate); margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: 'Inter', sans-serif; color: var(--ink); background: #fff; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(22,163,74,0.1); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit { width: 100%; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--dark); color: #94a3b8; padding: 64px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand p { font-size: 14px; line-height: 1.7; margin-top: 16px; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-btn { width: 36px; height: 36px; background: rgba(255,255,255,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #94a3b8; transition: all 0.2s; font-size: 16px; }
+    .social-btn:hover { background: var(--green); color: #fff; }
+    .footer-col h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #fff; margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 14px; color: #94a3b8; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: #4ade80; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 13px; }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { font-size: 13px; color: #94a3b8; }
+    .footer-bottom-links a:hover { color: #4ade80; }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 99; width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,0.4); transition: all 0.2s; }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 10px 32px rgba(37,211,102,0.5); }
+    .wa-float svg { width: 28px; height: 28px; fill: #fff; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 1024px) {
+      .hero-inner { flex-direction: column; }
+      .hero-visual { width: 100%; flex: unset; }
+      .hero-title { font-size: 42px; }
+      .why-grid, .about-grid, .platform-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .subjects-grid, .reviews-grid, .formats-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; row-gap: 32px; }
+      .stat-item:nth-child(2) { border-right: none; }
+      .stat-item:nth-child(3) { border-right: 1px solid var(--border); }
+    }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-mobile-btn { display: flex; }
+      .mobile-menu.open { display: flex; flex-direction: column; position: fixed; inset: 68px 0 0; background: #fff; padding: 32px 28px; gap: 24px; z-index: 99; }
+      .mobile-menu.open a { font-size: 18px; font-weight: 600; color: var(--ink); padding: 8px 0; border-bottom: 1px solid var(--border); }
+      .subjects-grid, .reviews-grid, .formats-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .why-visual { grid-template-columns: 1fr 1fr; }
+      .section { padding: 64px 0; }
+      .pricing-preview { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/34603828836" target="_blank" class="wa-float" title="Chat on WhatsApp" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-mark">4S</div>
+        <span>4S <span style="color:var(--green)">Academy</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#subjects">Subjects</a>
+        <a href="#about">About</a>
+        <a href="#easter">🐣 Easter Course</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="https://wa.me/34603828836" class="btn btn-wa">💬 WhatsApp</a>
+        <a href="https://calendar.app.google/z5vro8sJRnznyaem7" target="_blank" class="btn btn-green">Book Free Consultation</a>
+      </div>
+      <button class="nav-mobile-btn" id="mobileBtn" aria-label="Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#subjects" onclick="closeMobile()">Subjects</a>
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#easter" onclick="closeMobile()">🐣 Easter Course</a>
+    <a href="#reviews" onclick="closeMobile()">Reviews</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+    <a href="https://wa.me/34603828836" class="btn btn-wa" style="text-align:center;justify-content:center">💬 WhatsApp Us</a>
+    <a href="https://calendar.app.google/z5vro8sJRnznyaem7" target="_blank" class="btn btn-green" style="text-align:center;justify-content:center">Book Free Consultation</a>
+  </div>
+</nav>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  We remove the "I'm bad at Math" mindset forever! &nbsp;<em>Clarity, Confidence, Results — Your child's academic turnaround starts here.</em>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-deco d1">∑</div>
+  <div class="hero-deco d2">∫</div>
+  <div class="hero-deco d3">π</div>
+  <div class="hero-deco d4">∂</div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-eyebrow">
+          <span>🎓</span>
+          <span>Expert Tutoring · Barcelona &amp; Online</span>
+        </div>
+        <h1 class="hero-title">
+          Tutoring for<br>
+          <span class="accent">Maths &amp; Physics</span>
+        </h1>
+        <p class="hero-sub">
+          Personalised, concept-first tutoring that builds real understanding —
+          not just exam tricks. With 30+ years of experience across IB, A-Level,
+          IGCSE, SAT and AP curricula.
+        </p>
+        <div class="hero-cta">
+          <a href="https://calendar.app.google/z5vro8sJRnznyaem7" target="_blank" class="btn btn-green btn-lg">Book a Free Consultation</a>
+          <a href="#about" class="btn btn-lg" style="color:#fff;border:2px solid rgba(255,255,255,0.3);background:transparent;">Meet the Tutor</a>
+        </div>
+        <div class="hero-badges">
+          <span class="pill pill-white">IB Diploma</span>
+          <span class="pill pill-white">A Level</span>
+          <span class="pill pill-white">IGCSE</span>
+          <span class="pill pill-white">AP Calculus</span>
+          <span class="pill pill-white">SAT Math</span>
+          <span class="pill pill-white">★ 5.0 Google</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-title">Why students choose 4S Academy</div>
+          <div class="stat-row">
+            <div class="stat-icon" style="background:rgba(22,163,74,0.15);">🏆</div>
+            <div>
+              <div class="stat-val">80%</div>
+              <div class="stat-lbl">improve at least one grade within 3 months</div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-icon" style="background:rgba(22,163,74,0.15);">📚</div>
+            <div>
+              <div class="stat-val">30+</div>
+              <div class="stat-lbl">years teaching Mathematics &amp; Physics</div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-icon" style="background:rgba(22,163,74,0.15);">🌍</div>
+            <div>
+              <div class="stat-val">5</div>
+              <div class="stat-lbl">curricula: IB · A Level · IGCSE · AP · SAT</div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-icon" style="background:rgba(22,163,74,0.15);">💬</div>
+            <div>
+              <div class="stat-val">★ 5.0</div>
+              <div class="stat-lbl">verified Google rating from parents</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">🎓 IB Diploma Specialist</div>
+    <div class="trust-sep">·</div>
+    <div class="trust-item">📐 A Level &amp; IGCSE Expert</div>
+    <div class="trust-sep">·</div>
+    <div class="trust-item">🌍 Barcelona &amp; Online Worldwide</div>
+    <div class="trust-sep">·</div>
+    <div class="trust-item">🐣 Easter Crash Course — Now Enrolling</div>
+    <div class="trust-sep">·</div>
+    <div class="trust-item">📲 WhatsApp Available</div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Years of teaching experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Exam curricula covered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">80%</div>
+        <div class="stat-label">Students improve at least one grade</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5.0★</div>
+        <div class="stat-label">Verified Google reviews</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SUBJECTS -->
+<section class="section" id="subjects">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">What We Teach</span>
+      <h2 class="h2">Specialist Subjects, <br>Exceptional Results</h2>
+      <p class="lead" style="max-width:560px;margin:16px auto 0">Every subject taught with deep curriculum knowledge, exam-specific strategies, and genuine passion for helping students succeed.</p>
+    </div>
+    <div class="subjects-grid">
+
+      <div class="subject-card">
+        <div class="subject-icon">📐</div>
+        <h3>IB Mathematics</h3>
+        <p>Full coverage of AA and AI courses at both SL and HL. LaTeX-based question banks, worked solutions, and AI-generated practice papers.</p>
+        <div class="subject-tags">
+          <span class="tag">AA SL & HL</span>
+          <span class="tag">AI SL & HL</span>
+          <span class="tag">Paper 1 & 2</span>
+        </div>
+      </div>
+
+      <div class="subject-card">
+        <div class="subject-icon">⚡</div>
+        <h3>IB Physics</h3>
+        <p>SL and HL Physics with past-paper driven methodology. Strong emphasis on data booklet mastery and experimental design questions.</p>
+        <div class="subject-tags">
+          <span class="tag">SL & HL</span>
+          <span class="tag">IBDP</span>
+          <span class="tag">Extended Essay</span>
+        </div>
+      </div>
+
+      <div class="subject-card">
+        <div class="subject-icon">📊</div>
+        <h3>SAT Mathematics</h3>
+        <p>Digital SAT preparation with Desmos-integrated practice, adaptive module simulation, and full grid-in and MCQ coverage.</p>
+        <div class="subject-tags">
+          <span class="tag">Digital SAT</span>
+          <span class="tag">Desmos</span>
+          <span class="tag">Adaptive</span>
+        </div>
+      </div>
+
+      <div class="subject-card">
+        <div class="subject-icon">∫</div>
+        <h3>AP Calculus AB/BC</h3>
+        <p>Complete AP Calculus preparation including FRQ writing skills, digital MCQ simulation, and Desmos calculator mastery.</p>
+        <div class="subject-tags">
+          <span class="tag">AB & BC</span>
+          <span class="tag">FRQ</span>
+          <span class="tag">MCQ</span>
+        </div>
+      </div>
+
+      <div class="subject-card">
+        <div class="subject-icon">🔬</div>
+        <h3>AP Physics</h3>
+        <p>AP Physics 1, 2 & C (Mechanics and E&M). Hybrid exam simulation with physics reference table integrated throughout.</p>
+        <div class="subject-tags">
+          <span class="tag">AP Physics 1 & 2</span>
+          <span class="tag">Physics C</span>
+          <span class="tag">Lab skills</span>
+        </div>
+      </div>
+
+      <div class="subject-card">
+        <div class="subject-icon">🎓</div>
+        <h3>A-Level & IGCSE</h3>
+        <p>Cambridge, Edexcel and Oxford AQA Mathematics and Physics. Structured progression from IGCSE through to A-Level.</p>
+        <div class="subject-tags">
+          <span class="tag">Cambridge</span>
+          <span class="tag">Edexcel</span>
+          <span class="tag">Oxford AQA</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section why-section" id="why">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-content">
+        <span class="eyebrow text-white" style="opacity:0.7">Why 4S Academy</span>
+        <h2 class="h2">Teaching That Actually <span style="color:#4ade80">Works</span></h2>
+        <p class="lead">We don't just cover content — we rebuild the way students think about Maths and Physics, so they can handle any question the examiner throws at them.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div class="why-item-text">
+              <h4>Concept-First, Exam-Ready</h4>
+              <p>We teach the 'why' before the 'how'. Students who understand deeply never freeze in an exam.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div class="why-item-text">
+              <h4>Curriculum-Specific Knowledge</h4>
+              <p>Deep expertise in IB, A-Level, IGCSE, SAT and AP — not generic teaching, but targeted exam mastery.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div class="why-item-text">
+              <h4>Structured Progress Tracking</h4>
+              <p>Every session follows a plan. Every milestone is tracked. Students and parents always know where they stand.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-check">✓</div>
+            <div class="why-item-text">
+              <h4>AI-Powered Practice Materials</h4>
+              <p>Custom worksheets and question banks generated for each student's weak areas — not recycled past papers alone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual">
+        <div class="why-metric accent">
+          <div class="why-metric-num">80%</div>
+          <div class="why-metric-label">of students improve at least one grade within 3 months</div>
+        </div>
+        <div class="why-metric">
+          <div class="why-metric-num">30+</div>
+          <div class="why-metric-label">years teaching international curricula</div>
+        </div>
+        <div class="why-metric">
+          <div class="why-metric-num">5.0</div>
+          <div class="why-metric-label">average Google rating from verified parents</div>
+        </div>
+        <div class="why-metric accent">
+          <div class="why-metric-num">1:1</div>
+          <div class="why-metric-label">every session personalised to the individual student</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo">
+        <div class="about-photo-box">
+          <span class="about-photo-initials">SG</span>
+          <img class="about-photo-img" src="data:image/jpeg;base64,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" alt="Suneel Gupta - Founder of 4S Academy">
+          <div class="about-photo-tag">
+            <div class="about-photo-tag-icon">🏆</div>
+            <div class="about-photo-tag-text">
+              <p>Founder & Lead Tutor</p>
+              <strong>Suneel Gupta</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="eyebrow">Meet Your Tutor</span>
+        <h2 class="h2">Suneel Gupta</h2>
+        <p class="lead" style="margin-bottom:0">Highly experienced Mathematics & Physics educator</p>
+        <div class="about-bio" style="margin-top:24px">
+          <p>With over 30 years of teaching experience across international curricula, Suneel founded 4S Academy on a single belief: <strong>every student can excel with the right guidance.</strong></p>
+          <p>Based in Barcelona, Suneel works with students from the British School, Lycée Français, Deutsche Schule, and international schools worldwide — bringing deep curriculum expertise and a patient, concept-first teaching style that consistently turns academic anxiety into confidence.</p>
+          <p>His approach goes beyond content delivery. Students don't just pass their exams — they understand the material well enough to tackle questions they've never seen before. That's the 4S Academy difference.</p>
+        </div>
+        <div class="about-credentials">
+          <div class="credential">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            IB Curriculum Specialist
+          </div>
+          <div class="credential">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            30+ Years Experience
+          </div>
+          <div class="credential">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Barcelona & Online
+          </div>
+          <div class="credential">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            English & Spanish
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EASTER CRASH COURSE -->
+<section class="section platform-section" id="easter">
+  <div class="container">
+    <div class="platform-grid">
+      <div class="platform-content">
+        <div class="platform-coming" style="background:rgba(245,158,11,0.15);border-color:rgba(245,158,11,0.3);color:#fcd34d;">🐣 Now Enrolling · Easter 2026</div>
+        <span class="eyebrow text-white" style="opacity:0.6">Intensive Revision Programme</span>
+        <h2 class="h2">Easter Crash Course<br><span style="color:#4ade80">IB Mathematics AA</span></h2>
+        <p class="lead">9 days. 54 hours. Everything you need to walk into your IB Maths exam with complete confidence — covering every topic, SL and HL.</p>
+        <div class="platform-features">
+          <div class="platform-feature">
+            <div class="platform-feature-icon">📅</div>
+            <div class="platform-feature-text">
+              <h4>9 Days · 3 Blocks Per Day</h4>
+              <p>Morning SL sessions · Afternoon SL sessions · Evening HL extension — structured to your level.</p>
+            </div>
+          </div>
+          <div class="platform-feature">
+            <div class="platform-feature-icon">📄</div>
+            <div class="platform-feature-text">
+              <h4>AI-Generated Daily Worksheets</h4>
+              <p>Custom question sets for every topic, every day — reviewed and approved by Suneel. Not recycled past papers.</p>
+            </div>
+          </div>
+          <div class="platform-feature">
+            <div class="platform-feature-icon">📐</div>
+            <div class="platform-feature-text">
+              <h4>Formula Booklet & Exam Strategy</h4>
+              <p>Dedicated formula reference booklet and mark scheme literacy — the skills that separate a 5 from a 7.</p>
+            </div>
+          </div>
+          <div class="platform-feature">
+            <div class="platform-feature-icon">🎯</div>
+            <div class="platform-feature-text">
+              <h4>Full Curriculum Coverage</h4>
+              <p>Number & Algebra · Functions · Trigonometry · Geometry · Statistics · Calculus — nothing left out.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-white btn-lg">Reserve Your Place →</a>
+      </div>
+      <div>
+        <!-- Schedule card -->
+        <div class="platform-mockup">
+          <div style="color:#94a3b8;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px;">9-Day Programme · IB Math AA SL + HL</div>
+          <div class="mockup-screen" style="padding:0;background:transparent;">
+
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div class="mockup-row"><span class="mockup-label">Day 1 · Number & Algebra</span><span class="mockup-badge badge-green">SL + HL</span></div>
+              <div class="mockup-row"><span class="mockup-label">Day 2 · Functions I & II</span><span class="mockup-badge badge-green">SL + HL</span></div>
+              <div class="mockup-row"><span class="mockup-label">Day 3 · Trigonometry I</span><span class="mockup-badge badge-green">SL + HL</span></div>
+              <div class="mockup-row"><span class="mockup-label">Day 4 · Geometry & Trig II</span><span class="mockup-badge badge-green">SL + HL</span></div>
+              <div class="mockup-row"><span class="mockup-label">Day 5 · Statistics & Prob I</span><span class="mockup-badge badge-green">SL + HL</span></div>
+              <div class="mockup-row"><span class="mockup-label">Day 6 · Statistics & Prob II</span><span class="mockup-badge badge-yellow">HL Focus</span></div>
+              <div class="mockup-row"><span class="mockup-label">Day 7 · Calculus I — Diff</span><span class="mockup-badge badge-green">SL + HL</span></div>
+              <div class="mockup-row"><span class="mockup-label">Day 8 · Calculus II — Int</span><span class="mockup-badge badge-green">SL + HL</span></div>
+              <div class="mockup-row"><span class="mockup-label">Day 9 · Full Exam Simulation</span><span class="mockup-badge" style="background:rgba(167,139,250,0.2);color:#a78bfa;">Paper 1 + 2</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daily schedule -->
+        <div style="margin-top:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px;">
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#94a3b8;margin-bottom:14px;">Daily Schedule</div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="color:#fff;font-size:13px;font-weight:600;">09:00 – 11:00</span>
+              <span style="color:#4ade80;font-size:12px;background:rgba(74,222,128,0.1);padding:3px 10px;border-radius:99px;">SL Session 1</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="color:#fff;font-size:13px;font-weight:600;">11:30 – 13:30</span>
+              <span style="color:#4ade80;font-size:12px;background:rgba(74,222,128,0.1);padding:3px 10px;border-radius:99px;">SL Session 2</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="color:#fff;font-size:13px;font-weight:600;">14:30 – 16:30</span>
+              <span style="color:#fbbf24;font-size:12px;background:rgba(251,191,36,0.1);padding:3px 10px;border-radius:99px;">HL Extension</span>
+            </div>
+          </div>
+          <div style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.08);font-size:12px;color:#94a3b8;">
+            📍 Barcelona in-person &amp; 🌍 Online — places limited
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews-section" id="reviews">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">What Parents Say</span>
+      <h2 class="h2">Real Results, Real Families</h2>
+      <p class="lead" style="max-width:520px;margin:16px auto 0">Every review below comes from a real parent or student. We let the results speak for themselves.</p>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Bernat now feels confident with Math and Physics. He feels prepared for university. Suneel's help has been the key to Bernat's confidence and understanding. A pleasure to have you as his teacher for two years!</p>
+        <div class="review-author">
+          <div class="review-avatar">B</div>
+          <div>
+            <div class="review-name">Bernat's Parent</div>
+            <div class="review-meta">IB Math & Physics HL · Barcelona</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">My daughter has been learning so much! She is looking forward to more lessons. Suneel has a wonderful way of explaining things that makes everything click.</p>
+        <div class="review-author">
+          <div class="review-avatar">W</div>
+          <div>
+            <div class="review-name">Wendy Malla</div>
+            <div class="review-meta">IB Mathematics · Barcelona</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Suneel transformed my son's relationship with Maths completely. From dreading every lesson to genuinely enjoying problem-solving — in just a few months. Incredible patience and expertise.</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div>
+            <div class="review-name">Marco's Parent</div>
+            <div class="review-meta">IB Math AA SL · Online</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="google-badge">
+      <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      See all reviews on <a href="https://g.page/4sacademy" target="_blank">Google</a>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section class="section" id="formats">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">How We Work</span>
+      <h2 class="h2">Flexible Learning, Your Way</h2>
+    </div>
+    <div class="formats-grid">
+      <div class="format-card">
+        <div class="format-icon">🏠</div>
+        <h3>Online (1-to-1)</h3>
+        <p>Live sessions via video call, anywhere in the world. Shared screen, digital whiteboard, and recorded session notes sent after each class.</p>
+      </div>
+      <div class="format-card">
+        <div class="format-icon">🏫</div>
+        <h3>In-Person Barcelona</h3>
+        <p>Face-to-face sessions at our centre in L'Hospitalet de Llobregat. Ideal for students who prefer a dedicated study environment.</p>
+      </div>
+      <div class="format-card">
+        <div class="format-icon">👥</div>
+        <h3>Intensive Programmes</h3>
+        <p>Exam-period crash courses and holiday intensives — including our popular Easter Crash Course for IB Math AA/AI students.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <h2 class="h2">Ready to Turn Things Around?</h2>
+    <p>Book a free 30-minute consultation. No commitment. Just a conversation about your goals.</p>
+    <div class="cta-actions">
+      <a href="https://calendar.app.google/z5vro8sJRnznyaem7" target="_blank" class="btn btn-white btn-lg">Book Free Consultation</a>
+      <a href="https://wa.me/34603828836" target="_blank" class="btn btn-lg" style="background:rgba(255,255,255,0.15);color:#fff;border:2px solid rgba(255,255,255,0.3)">💬 WhatsApp Us Directly</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Get in Touch</span>
+      <h2 class="h2">Start With a Free Consultation</h2>
+      <p class="lead" style="max-width:500px;margin:16px auto 0">Tell us about your student and their goals. We'll get back to you within 24 hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3 style="margin-bottom:12px">We'd love to hear from you</h3>
+        <p>Whether you're looking for ongoing 1-to-1 tutoring, exam crash courses, or access to our student platform — reach out and we'll find the right fit.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📧</div>
+            <div class="contact-detail-text">
+              <p>Email</p>
+              <a href="mailto:info@4sacademy.com">info@4sacademy.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">💬</div>
+            <div class="contact-detail-text">
+              <p>WhatsApp (fastest response)</p>
+              <a href="https://wa.me/34603828836" target="_blank">Message us on WhatsApp</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <p>In-Person Location</p>
+              <strong>Sant Elies 11-19, L'Hospitalet de Llobregat, Barcelona</strong>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🌍</div>
+            <div class="contact-detail-text">
+              <p>Online students</p>
+              <strong>Worldwide — any timezone</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Parent / Student Name *</label>
+              <input type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>WhatsApp / Phone</label>
+              <input type="tel" placeholder="+34 ...">
+            </div>
+            <div class="form-group">
+              <label>Subject of Interest *</label>
+              <select required>
+                <option value="">Select subject...</option>
+                <option>IB Math AA HL</option>
+                <option>IB Math AA SL</option>
+                <option>IB Math AI HL</option>
+                <option>IB Math AI SL</option>
+                <option>IB Physics HL</option>
+                <option>IB Physics SL</option>
+                <option>SAT Mathematics</option>
+                <option>AP Calculus AB</option>
+                <option>AP Calculus BC</option>
+                <option>AP Physics</option>
+                <option>A-Level Maths</option>
+                <option>A-Level Physics</option>
+                <option>IGCSE Maths / Physics</option>
+                <option>Multiple subjects</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Tell us about your goals</label>
+            <textarea placeholder="e.g. My daughter is in IB Year 2, struggling with calculus, aiming for a 6 in Math AA HL..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-green btn-lg form-submit">Send Message & Book Consultation →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:0">
+          <div class="logo-mark">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="2" y="18" font-family="Arial" font-weight="900" font-size="16" fill="#16a34a">4S</text>
+            </svg>
+          </div>
+          <span style="color:#fff">4S Academy</span>
+        </div>
+        <p>Expert tutoring in IB, A-Level, SAT & AP. Based in Barcelona, available worldwide. Clarity. Confidence. Results.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="WhatsApp">💬</a>
+          <a href="#" class="social-btn" aria-label="Instagram">📷</a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Subjects</h4>
+        <ul>
+          <li><a href="#subjects">IB Mathematics</a></li>
+          <li><a href="#subjects">IB Physics</a></li>
+          <li><a href="#subjects">SAT Math</a></li>
+          <li><a href="#subjects">AP Calculus</a></li>
+          <li><a href="#subjects">A-Level / IGCSE</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#formats">1-to-1 Tutoring</a></li>
+          <li><a href="#formats">Online Sessions</a></li>
+          <li><a href="#formats">Intensive Courses</a></li>
+          <li><a href="#platform">Student Platform</a></li>
+          <li><a href="#contact">Free Consultation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Academy</h4>
+        <ul>
+          <li><a href="#about">About Suneel</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="mailto:info@4sacademy.com">info@4sacademy.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 4S Academy · L'Hospitalet de Llobregat, Barcelona · <a href="mailto:info@4sacademy.com" style="color:#4ade80">info@4sacademy.com</a></p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const btn = document.getElementById('mobileBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('open'));
+  function closeMobile() { menu.classList.remove('open'); }
+
+  // Nav scroll shadow
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').style.boxShadow =
+      window.scrollY > 10 ? '0 4px 24px rgba(0,0,0,0.1)' : 'none';
+  });
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type=submit]');
+    btn.textContent = '✓ Message Sent! We\'ll be in touch within 24 hours.';
+    btn.style.background = '#15803d';
+    btn.disabled = true;
+  }
+</script>
+</body>
+</html>
